@@ -1,0 +1,37 @@
+BARBEARIA AVENGERS — COMO ABRIR NO VS CODE
+
+1. Extraia todo o conteúdo deste arquivo ZIP.
+2. Abra a pasta extraída no Visual Studio Code.
+3. Instale o Node.js 22 ou superior, caso ainda não tenha.
+4. Abra o terminal integrado do VS Code.
+5. Execute:
+
+   npm install
+   npm run dev
+
+6. Abra no navegador o endereço mostrado pelo terminal.
+
+ARQUIVOS PRINCIPAIS
+
+- app/page.tsx: textos, preços, links, serviços, equipe, FAQ e estrutura.
+- app/globals.css: cores, layout, animações e responsividade.
+- app/layout.tsx: título, descrição, SEO e fontes.
+- public/: favicon e outros arquivos públicos.
+
+CONFIGURAÇÕES FÁCEIS DE ALTERAR
+
+No início de app/page.tsx existe o objeto SITE. Nele ficam centralizados:
+
+- link de agendamento;
+- número do WhatsApp;
+- telefone;
+- Instagram;
+- link de localização.
+
+As listas de serviços, galeria, equipe, avaliações e FAQ também ficam no começo
+do mesmo arquivo.
+
+OBSERVAÇÃO
+
+As dependências node_modules não estão incluídas no ZIP porque são recriadas
+automaticamente com npm install.
