@@ -199,25 +199,27 @@ export default function Home() {
       </header>
 
       <section className="hero" id="inicio">
-        <div
-          className="heroImage"
-          role="img"
-          aria-label="Barbeiro realizando corte moderno"
-        />
+        <div className="heroBackground">
+          <picture>
+            <source srcSet="/barbearia-hero-bg.webp" type="image/webp" />
+            <img
+              src="/barbearia-hero-bg.jpg"
+              alt="Barbeiro realizando acabamento de barba na Barbearia Tatuí"
+              className="heroImg"
+              loading="eager"
+              fetchPriority="high"
+            />
+          </picture>
+          <div className="heroOverlay" />
+        </div>
 
         <div className="heroGrid" />
-        <div className="heroBeam" />
-
-        <div className="precisionMark markOne">45°</div>
-        <div className="precisionMark markTwo">01 / 07</div>
 
         <div className="heroContent">
-          <div className="eyebrow">
-            <span /> Barbearia moderna em Tatuí
-          </div>
+          <div className="heroSubtitle">— MAIS QUE UM CORTE, UMA ATITUDE.</div>
 
           <h1>
-            SEU ESTILO.
+            ESTILO.
             <br />
             SEU HORÁRIO.
             <br />
@@ -230,10 +232,20 @@ export default function Home() {
           </p>
 
           <div className="heroButtons">
-            <Book />
+            <Book label="Agendar horário" />
 
-            <a className="button ghost" href="#servicos">
-              Conhecer serviços ↓
+            <a className="heroPlayBtn" href="#sobre" aria-label="Conheça nossa barbearia">
+              <span className="heroPlayCircle" aria-hidden="true">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </span>
+              <span className="heroPlayText">Conheça nossa barbearia</span>
             </a>
           </div>
 
@@ -246,29 +258,67 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="heroSide">
-          PRECISÃO <span>•</span> PRESENÇA <span>•</span> ATITUDE
-        </div>
+        <div className="heroBottomBar">
+          <div className="socialProof">
+            <div>
+              <strong>4,9</strong>
+              <span className="stars">★★★★★</span>
+            </div>
 
-        <div className="socialProof">
-          <div>
-            <strong>4,9</strong>
-            <span className="stars">★★★★★</span>
+            <p>
+              no Google
+              <br />
+              <b>+160 avaliações</b>
+            </p>
+
+            <span className="proofLine" />
+
+            <p>
+              Atendimento que
+              <br />
+              <b>Tatuí recomenda.</b>
+            </p>
           </div>
 
-          <p>
-            no Google
-            <br />
-            <b>+160 avaliações</b>
-          </p>
+          <div className="heroDiferenciais">
+            <div className="diferencialItem">
+              <span className="diferencialIcon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="6" cy="6" r="3" />
+                  <circle cx="6" cy="18" r="3" />
+                  <line x1="20" y1="4" x2="8.12" y2="15.88" />
+                  <line x1="14.47" y1="14.48" x2="20" y2="20" />
+                  <line x1="8.12" y1="8.12" x2="12" y2="12" />
+                </svg>
+              </span>
+              <span>Profissionais Especializados</span>
+            </div>
 
-          <span className="proofLine" />
+            <div className="diferencialDivider" />
 
-          <p>
-            Atendimento que
-            <br />
-            <b>Tatuí recomenda.</b>
-          </p>
+            <div className="diferencialItem">
+              <span className="diferencialIcon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M6 3h12l4 6-10 12L2 9z" />
+                  <path d="M12 21L8 9h8z" />
+                  <path d="M2 9h20" />
+                </svg>
+              </span>
+              <span>Produtos de Alta Qualidade</span>
+            </div>
+
+            <div className="diferencialDivider" />
+
+            <div className="diferencialItem">
+              <span className="diferencialIcon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </span>
+              <span>Localização Privilegiada</span>
+            </div>
+          </div>
         </div>
       </section>
 
